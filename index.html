@@ -4,12 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trần Hoàng Hà - Graphic Designer & Developer</title>
+    <title>Your Name - Graphic Designer</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        /* Toast Message Style */
+        .toast {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ff6b6b, #764ba2);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
         }
 
         body {
@@ -354,25 +372,28 @@
 </head>
 
 <body>
+    <!-- Toast Message -->
+    <div id="toast" class="toast"></div>
+    
     <div class="container">
         <header>
             <div class="profile-img">
                 👨‍🎨
             </div>
-            <h1>Trần Hoàng Hà</h1>
-            <p class="subtitle">Graphic Designer & Developer</p>
+            <h1>Tên Của Bạn</h1>
+            <p class="subtitle">Graphic Designer & Creative Artist</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <span>📧</span>
-                    <span>hatran12387@gmail.com</span>
+                    <span>email@example.com</span>
                 </div>
                 <div class="contact-item">
                     <span>📱</span>
-                    <span>+84 385259692</span>
+                    <span>+84 xxx xxx xxx</span>
                 </div>
                 <div class="contact-item">
                     <span>📍</span>
-                    <span>Bình Dương, Việt Nam</span>
+                    <span>Hồ Chí Minh, Việt Nam</span>
                 </div>
             </div>
         </header>
@@ -380,16 +401,14 @@
         <section class="section">
             <h2>Về Tôi</h2>
             <p class="about-text">
-                Tôi là một graphic designer đam mê với 6 tháng kinh nghiệm trong lĩnh vực thiết kế.
-                Chuyên môn của tôi bao gồm thiết kế thiết kế web, nhãn bao bì, mobile app,...
+                Tôi là một graphic designer đam mê với hơn X năm kinh nghiệm trong lĩnh vực thiết kế.
+                Chuyên môn của tôi bao gồm thiết kế logo, branding, thiết kế web, và marketing materials.
                 Tôi luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để mang lại giá trị tốt nhất cho khách hàng.
                 Với sự kết hợp giữa kỹ năng kỹ thuật vững chắc và tư duy sáng tạo, tôi có thể biến những ý tưởng
                 thành hiện thực một cách hiệu quả và ấn tượng.
             </p>
             <a href="#contact" class="cta-button">Liên Hệ Tôi</a>
         </section>
-    <!-- Toast message -->
-    <div id="toast-message" style="display:none; position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: linear-gradient(45deg, #ff6b6b, #764ba2); color: white; padding: 16px 32px; border-radius: 30px; font-size: 1.1em; box-shadow: 0 4px 16px rgba(0,0,0,0.15); z-index: 9999; transition: opacity 0.3s; opacity: 0;"></div>
 
         <section class="section">
             <h2>Kỹ Năng</h2>
@@ -405,10 +424,9 @@
                     <p>Figma</p>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">📄</div>
+                    <div class="skill-icon">🏷️</div>
                     <h3>Label Design</h3>
-                    <p>Packaging, Label</p>
-                    
+                    <p>Label, Packaging</p>
                 </div>
             </div>
         </section>
@@ -419,7 +437,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=800&fit=crop');">
+                        style="background-image: url('https://images.unsplash.com/photo-1509281373149-e957c6296406?w=600&h=400&fit=crop');">
                         <div class="portfolio-overlay">
                             <a href="https://res.cloudinary.com/dyp4yk66w/image/upload/v1755677512/poster222222222222_ryfsix.jpg" target="_blank" class="view-project">Xem Chi Tiết</a>
                         </div>
@@ -475,20 +493,20 @@
 
                 <div class="portfolio-item">
                     <div class="portfolio-image"
-                        style="background-image: url('https://baobiab.com/wp-content/uploads/2023/09/bao-bi-thuoc-tru-sau-4.jpg'); background-size: cover; background-position: center;">
+                        style="background-image: url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=600&h=400&fit=crop');">
                         <div class="portfolio-overlay">
                             <a href="#" class="view-project">Xem Chi Tiết</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3 class="portfolio-title">Thiết Kế Bao Bì Sản Phẩm Thuốc Sâu</h3>
+                        <h3 class="portfolio-title">Thiết Kế Bao Bì Thuốc Bảo Vệ Thực Vật</h3>
                         <p class="portfolio-description">
-                            Thiết kế bao bì sản phẩm độc đáo và bắt mắt,
-                            giúp sản phẩm nổi bật trên kệ hàng.
+                            Thiết kế bao bì chuyên nghiệp cho sản phẩm thuốc bảo vệ thực vật,
+                            đảm bảo thông tin cảnh báo an toàn và nhận diện thương hiệu rõ ràng.
                         </p>
                         <div class="project-links">
-                            <a href="#" class="project-link">🏪 In Store</a>
-                            <a href="#" class="project-link">🎨 Process</a>
+                            <a href="#" class="project-link">� Sản Phẩm</a>
+                            <a href="#" class="project-link">⚠️ Tiêu Chuẩn An Toàn</a>
                         </div>
                     </div>
                 </div>
@@ -504,7 +522,7 @@
             <div class="contact-info" style="justify-content: flex-start; margin-top: 20px;">
                 <div class="contact-item">
                     <span>📧</span>
-                    <span>hatran12387@gmail.com</span>
+                    <span>hatran12387@gmmail.com</span>
                 </div>
                 <div class="contact-item">
                     <span>📱</span>
@@ -549,6 +567,19 @@
             observer.observe(section);
         });
 
+        // Toast message function
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.opacity = '1';
+            toast.style.visibility = 'visible';
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.visibility = 'hidden';
+            }, 3000);
+        }
+
         // Hover effect cho portfolio items
         document.querySelectorAll('.portfolio-item').forEach(item => {
             item.addEventListener('mouseenter', function () {
@@ -558,29 +589,16 @@
             item.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(0) scale(1)';
             });
-        });
 
-            // Toast message function
-            function showToast(message) {
-                const toast = document.getElementById('toast-message');
-                toast.textContent = message;
-                toast.style.display = 'block';
-                setTimeout(() => { toast.style.opacity = 1; }, 10);
-                setTimeout(() => {
-                    toast.style.opacity = 0;
-                    setTimeout(() => { toast.style.display = 'none'; }, 400);
-                }, 2000);
+            // Check if this is the packaging portfolio item
+            const title = item.querySelector('.portfolio-title');
+            if (title && title.textContent.trim() === 'Thiết Kế Bao Bì Thuốc Bảo Vệ Thực Vật') {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showToast('Tạm thời chưa thể xem');
+                });
             }
-
-            // Handling error for 'Thiết Kế Bao Bì Sản Phẩm'
-            document.querySelectorAll('.portfolio-title').forEach(title => {
-                if (title.textContent.trim() === 'Thiết Kế Bao Bì Sản Phẩm') {
-                    title.closest('.portfolio-item').addEventListener('click', function(e) {
-                        e.preventDefault();
-                        showToast('Tạm thời chưa thể xem');
-                    });
-                }
-            });
+        });
     </script>
 </body>
 
